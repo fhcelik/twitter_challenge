@@ -1,0 +1,7 @@
+package fetchSearchData;
+
+public class files {
+	createFile(String name){
+		File file = new File("c://temp//testFile1.txt");
+	}
+}

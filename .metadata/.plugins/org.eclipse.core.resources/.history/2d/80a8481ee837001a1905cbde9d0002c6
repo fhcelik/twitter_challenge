@@ -1,0 +1,14 @@
+package fetchSearchData;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class userInputsTest {
+
+	@Test
+	void checkTopic() {
+		fail("Not yet implemented");
+	}
+
+}

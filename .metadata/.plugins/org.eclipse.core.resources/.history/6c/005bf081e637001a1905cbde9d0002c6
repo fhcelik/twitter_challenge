@@ -1,0 +1,11 @@
+package fetchSearchData;
+
+public class fetchSearchData {
+
+	public static void main(String[] args) {
+		userInputs user = new userInputs();
+		user.inputs();
+
+	}
+
+}

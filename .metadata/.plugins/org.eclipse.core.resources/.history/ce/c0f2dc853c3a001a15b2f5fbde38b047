@@ -1,0 +1,31 @@
+package fetchSearchData;
+
+import java.util.Scanner;
+
+public class userInputs {
+
+	String[] inputs() {
+		String[] topics= new String[5];
+		@SuppressWarnings("resource")
+		Scanner input= new Scanner(System.in);
+		System.out.println("Please enter five different topics!!!");
+		for(int i=0; i<5; i++) {
+			String receivingTopic= input.nextLine();
+			while(!checkTopic(topics, receivingTopic)) {
+				System.out.println("Please enter different topic!!!");
+				receivingTopic= input.nextLine();
+			}
+			topics[i]=receivingTopic;
+		}
+		return topics;
+	}
+	boolean checkTopic(String[] topics, String receivingTopic){
+		for(String topic : topics) {
+			if(receivingTopic.equalsIgnoreCase(topic)){
+				return false;
+			}
+		}
+		return true;
+	}
+
+}

@@ -1,0 +1,9 @@
+package fetchSearchData;
+
+public class fetchSearchData {
+
+	public static void main(String[] args) {
+		userInputs topics = new userInputs();
+	}
+
+}

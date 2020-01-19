@@ -1,0 +1,22 @@
+package fetchSearchData;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class fetchSearchData {
+
+	public static void main(String[] args) throws IOException {
+		//Instantiating current class to an object
+		Scanner quit= new Scanner(System.in);
+		TwitterClient search = new TwitterClient();
+		userInputs topics = new userInputs();
+		files file = new files();
+		ArrayList<String> topic = topics.inputs();
+		for(int i=0; i<topic.size(); i++) {
+			file.createFile("sa");
+		   System.out.println(search.searchForWord(topic.get(i)));
+		}
+	}
+
+}

@@ -1,0 +1,12 @@
+package fetchSearchData;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class files {
+	void createFile(String name, String data) throws IOException{
+		FileOutputStream out = new FileOutputStream("C://Users//fhcel//Documents//software//twitter_challenge//searchFile//"+name+".txt");	
+		out.write(data.getBytes());
+		out.close();
+	}
+}

@@ -1,0 +1,13 @@
+package fetchSearchData;
+
+public class fetchSearchData {
+
+	public static void main(String[] args) {
+		userInputs user = new userInputs();
+		for (String i :user.inputs()) {
+			System.out.println(i);
+		}
+
+	}
+
+}
