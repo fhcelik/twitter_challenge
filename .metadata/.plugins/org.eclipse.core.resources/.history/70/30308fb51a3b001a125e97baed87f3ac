@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class TwitterClient {
+
 	//Consumer Key
 	static String consumerKeyStr = "Bo0c1BJqvedi6dYD0Jse6yPXJ";
 	static String consumerSecretStr = "iCfNlE4C8aONDa7rFrx7Dbwgop9RC9RvdrBNiWc4wtyBm31z3l";
@@ -20,25 +21,34 @@ public class TwitterClient {
 	static String accessTokenSecretStr = "aoAeqZ3KmXaf6fx5nnk4gcDfvujB3B40pR5vaZTX2VgOp";
 	
 	public List<String> searchForWord(String word){
+		
 		List<String> tweets = new ArrayList<String>();
 		
 		try {
+			
 			Twitter twitter = new TwitterFactory().getInstance();
+
 			twitter.setOAuthConsumer(consumerKeyStr, consumerSecretStr);
 			
-			AccessToken accessToken = new AccessToken(accessTokenStr, accessTokenSecretStr);
+			AccessToken accessToken = new AccessToken(accessTokenStr,
+					accessTokenSecretStr);
+
 			twitter.setOAuthAccessToken(accessToken);
-			
+
 			Query query = new Query(word);
-			query.setCount(100);
-			QueryResult result = twitter.search(query);
 			
+			query.setCount(100);
+			
+			QueryResult result = twitter.search(query);
+
 			for(Status status: result.getTweets()){
 				tweets.add(status.getText());
 			}
+
 		} catch (TwitterException te) {
 			te.printStackTrace();
 		}
+		
 		return tweets;
 	}
 	

@@ -7,12 +7,10 @@ import java.io.IOException;
 import java.util.List;
 
 public class files {
-	public void createFile(String name, List<String> data) throws IOException{
+	void createFile(String name, List<String> data) throws IOException{
 		int i=0;
-		
 		String path = new File("searchFile/"+name+".txt").getAbsolutePath();
 		BufferedWriter out = new BufferedWriter(new FileWriter(path,true));	
-		
 		while(i<data.size()) {
 			String content = "tweet:  "+data.get(i) +System.lineSeparator();
 			out.write(content);
