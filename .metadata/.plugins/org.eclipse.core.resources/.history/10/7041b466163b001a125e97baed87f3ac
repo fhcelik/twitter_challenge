@@ -1,0 +1,19 @@
+package fetchSearchData;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
+
+public class files {
+	void createFile(String name, List<String> data) throws IOException{
+		int i=0;
+		BufferedWriter out = new BufferedWriter(new FileWriter("../twitter_challenge/searchFile/"+name+".txt",true));	
+		while(i<data.size()) {
+			String content = "tweet:  "+data.get(i) +System.lineSeparator();
+			out.write(content);
+			i++;
+		}
+		out.close();
+	}
+}

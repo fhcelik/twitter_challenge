@@ -37,7 +37,7 @@ public class TwitterClient {
 
 			Query query = new Query(word);
 			
-			query.setCount(1000);
+			query.setCount(100);
 			
 			QueryResult result = twitter.search(query);
 

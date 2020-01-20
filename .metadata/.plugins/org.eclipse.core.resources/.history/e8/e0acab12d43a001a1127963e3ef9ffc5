@@ -1,0 +1,32 @@
+package fetchSearchData;
+
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class fetchSearchData {
+	static boolean keyPress(int value) {
+		if(value != KeyEvent.VK_ESCAPE) {
+			System.out.println("!!!it is finished!!!");
+			System.exit(0);
+		}
+		return false;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) throws IOException {
+		TwitterClient search = new TwitterClient();
+		userInputs topics = new userInputs();
+		files file = new files();
+		ArrayList<String> topic = new ArrayList<String>();
+		topic = topics.inputs();
+		System.out.println("Press ESC to quit the program");
+		while(!keyPress(KeyEvent.KEY_PRESSED)) {
+			for(int i=0; i<topic.size();i++) {
+				file.createFile(topic.get(i), search.searchForWord(topic.get(i)));
+			}
+		}
+	}
+
+}
