@@ -12,12 +12,12 @@ import java.util.ArrayList;
 
 public class TwitterClient {
 	//Consumer Key
-	static String consumerKeyStr = "xxxxxx";
-	static String consumerSecretStr = "xxxxx";
+	static String consumerKeyStr = "Bo0c1BJqvedi6dYD0Jse6yPXJ";
+	static String consumerSecretStr = "iCfNlE4C8aONDa7rFrx7Dbwgop9RC9RvdrBNiWc4wtyBm31z3l";
 	
 	//Access Token
-	static String accessTokenStr = "xxxxxx";
-	static String accessTokenSecretStr = "xxxxxx";
+	static String accessTokenStr = "982684943393239040-KvBbVPIiWaFS8TGQ2CLYW2KFWUOu05m";
+	static String accessTokenSecretStr = "aoAeqZ3KmXaf6fx5nnk4gcDfvujB3B40pR5vaZTX2VgOp";
 	
 	public List<String> searchForWord(String word){
 		List<String> tweets = new ArrayList<String>();
